@@ -1,0 +1,37 @@
+pluginManagement {
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.id == "kotlin-multiplatform") {
+                useModule("org.jetbrains.kotlin:kotlin-gradle-plugin:${requested.version}")
+            }
+
+            if (requested.id.id == "kotlin-multiplatform") {
+                useModule("org.jetbrains.kotlin:kotlin-gradle-plugin:${requested.version}")
+            }
+
+            if (requested.id.id == "kotlin-multiplatform") {
+                useModule("org.jetbrains.kotlin:kotlin-gradle-plugin:${requested.version}")
+            }
+
+            if (requested.id.id == "kotlin-multiplatform") {
+                useModule("org.jetbrains.kotlin:kotlin-gradle-plugin:${requested.version}")
+            }
+        }
+    }
+}
+rootProject.name = 'snon-kt'
+
+
+enableFeaturePreview('GRADLE_METADATA')
+rootProject.name = 'snon-kt'
+
+
+enableFeaturePreview('GRADLE_METADATA')
+rootProject.name = 'snon-kt'
+
+
+enableFeaturePreview('GRADLE_METADATA')
+rootProject.name = 'snon-kt'
+
+
+enableFeaturePreview('GRADLE_METADATA')

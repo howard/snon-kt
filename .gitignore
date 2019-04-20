@@ -1,0 +1,6 @@
+# Build artifacts and caches:
+/.gradle
+/build
+
+# IDEs:
+/.idea
