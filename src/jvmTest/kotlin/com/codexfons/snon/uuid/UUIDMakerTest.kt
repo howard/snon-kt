@@ -1,6 +1,6 @@
 package com.codexfons.snon.uuid
 
-import com.codexfons.snon.comon.v2.UUIDMakerTestBase
+import com.codexfons.snon.uuid.UUIDMakerTestBase
 
 class UUIDMakerTest : UUIDMakerTestBase() {
 }

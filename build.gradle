@@ -3,9 +3,12 @@ plugins {
 }
 repositories {
     mavenCentral()
+    maven { url "https://dl.bintray.com/soywiz/soywiz" }
 }
-group 'com.example'
+group 'com.codexfons'
 version '0.0.1'
+
+def klockVersion = "1.4.0"
 
 apply plugin: 'maven-publish'
 
@@ -16,11 +19,13 @@ kotlin {
     // For Linux, should be changed to e.g. linuxX64
     // For MacOS, should be changed to e.g. macosX64
     // For Windows, should be changed to e.g. mingwX64
-    linuxX64("linux")
+    // Native Linux disabled temporarily due to issues with linking libraries like Klock.
+    //linuxX64("linux")
     sourceSets {
         commonMain {
             dependencies {
                 implementation kotlin('stdlib-common')
+                api "com.soywiz:klock-metadata:$klockVersion"
             }
         }
         commonTest {
@@ -32,6 +37,7 @@ kotlin {
         jvmMain {
             dependencies {
                 implementation kotlin('stdlib-jdk8')
+                api "com.soywiz:klock-jvm:$klockVersion"
             }
         }
         jvmTest {
@@ -43,6 +49,7 @@ kotlin {
         jsMain {
             dependencies {
                 implementation kotlin('stdlib-js')
+                api "com.soywiz:klock-js:$klockVersion"
             }
         }
         jsTest {
@@ -51,8 +58,21 @@ kotlin {
             }
         }
         linuxMain {
+            dependencies {
+                api "com.soywiz:klock-linuxx64:$klockVersion"
+            }
         }
         linuxTest {
+        }
+    }
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId 'com.codexfons'
+            artifactId 'snon-kt'
+            version getVersion()
         }
     }
 }
