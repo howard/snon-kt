@@ -1,7 +1,5 @@
-package com.codexfons.snon.comon.v2
+package com.codexfons.snon.uuid
 
-import com.codexfons.snon.uuid.UUID
-import com.codexfons.snon.uuid.PlatformSpecificUUIDMaker
 import kotlin.test.Test
 import kotlin.test.fail
 
